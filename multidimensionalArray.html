@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="UTF-8">
+<title>Class Average</title>
+<link href="" rel="stylesheet">
+<script>
+var students = [ 
+    ['Cody',75] , 
+    ['Luke', 81] , 
+    ['Lewis', 71] , 
+    ['Drew', 74] , 
+    ['Joe', 82] , 
+    ['Laura', 85] , 
+    ['Chris', 70] , 
+    ['Michelle', 69] , 
+    ['Amanda', 81] , 
+    ['Desmond', 77] ];
+
+
+//calculate average grade of class - (total of grades / 10) using a function()
+
+
+function avgCalc(){
+    var sum = 0;
+ for (var i = 0; i<students.length; i++) {
+    sum += (students[i][1]);
+    }
+    return sum / students.length;
+    };
+
+
+//create function for the letter grades
+
+function getGradeLetter(classAverage) {
+    if (classAverage > 89) {
+        return ("Letter grade: " + "A");
+    } else if (classAverage > 79) {
+        return ("Letter grade: " + "B");
+    } else if (classAverage > 69) {
+        return ("Letter grade: " + "C");
+    } else if (classAverage > 59) {
+        return ("Letter grade: " + "D");
+    } else {
+        return ("Letter grade: " + "F");
+    }
+};
+</script>
+</head>
+<body>
+   <header> <h3>Multidimensional Array Exercise</h3></header>
+<div>
+<p>
+<script>
+document.write("Average grade: " + avgCalc() + "<br>");
+
+document.write(getGradeLetter(avgCalc()));
+</script>
+</p>
+</div>
+</body>
+</hmtl>
